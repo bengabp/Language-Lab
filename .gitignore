@@ -1,0 +1,4 @@
+__pycache__/
+languagelab/__pycache__/
+authentication_app/__pycache__/
+chat_app/__pycache__/
