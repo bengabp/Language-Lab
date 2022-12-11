@@ -1,0 +1,238 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Language Lab</title>
+    <meta name="description" content="Free bootstrap template Atlas">
+    <link rel="icon" href="{% static 'img/lab-logo.png' %}" sizes="32x32" type="image/png">
+    <!-- custom.css -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <!-- bootstrap.min.css -->
+    <link rel="stylesheet" href="{% static 'css/custom_bootstrap.min.css' %}">
+	<!-- font-awesome -->
+    <link rel="stylesheet" href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}">
+    
+    <!-- AOS -->
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+
+<body>
+    <!-- banner -->
+    <div class="jumbotron jumbotron-fluid" id="banner" style="background-image: url({% static 'img/banner-bk.jpg' %});">
+        <div class="container text-center text-md-left">
+            <header>
+                <div class="row align-items-center text-white">
+                    <div class="col-2" style="max-width:max-content;">
+                        <img src="{% static 'img/lab-logo.png' %}" alt="logo">
+                    </div>
+                </div>
+            </header>
+            <p data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true">
+                <h1  class="display-3 text-white font-weight-bold my-5">
+                    Language Lab
+                </h1>
+                <h4 style="color:#8ECAE6;">Learn Languages with ease</h4>
+            </p>
+            <a href="/auth/login" data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="btn my-4 font-weight-bold atlas-cta cta-green">Get Started</a>
+            <div style="min-height:150px;"></div>
+        </div>
+    </div>
+    <!-- three-blcok -->
+    <div class="container my-5 py-2" id="linfo">
+        <h2 class="text-center font-weight-bold my-5">The best way to learn is by practice</h2>
+        <div class="row">
+            <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center">
+                <img src="{% static 'img/step-1.svg' %}" alt="Create an Account" class="mx-auto" height="200px" width="200px">
+                <h4>Create an Account</h4>
+                <p>Your account is unique and anyone can find you using your username only</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center">
+                <img src="{% static 'img/step-2.svg' %}" alt="Search for Friends" class="mx-auto" height="200px" width="200px">
+                <h4>Search for Friends</h4>
+                <p>Search for friends learning similar languages and send them a connection request.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center">
+                <img src="{% static 'img/step-3.svg' %}" alt="Start Chatting" class="mx-auto" height="200px" width="200px">
+                <h4>Start Chatting</h4>
+                <p>Exchange voice messages and text and learn from each others</p>
+            </div>
+        </div>
+    </div>
+    <!-- feature (skew background) -->
+    <div class="jumbotron jumbotron-fluid feature" id="feature-first">
+        <div class="container my-5">
+            <div class="row justify-content-between text-center text-md-left">
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6">
+                    <h2 class="font-weight-bold">Set goals and reminders</h2>
+                    <p class="fw-bolder"> Its very difficult to keep in mind your goals when you have alot to learn .
+                        <br> Why not just tell us, we'll help you.</p>
+                    <a href="/tasks" class="btn my-4 font-weight-bold atlas-cta cta-blue">Learn More</a>
+                </div>
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center">
+                    <img src="{% static 'img/feature-1.svg' %}" alt="Take a look inside" class="mx-auto d-block" height="300px" width="300px">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- feature (green background) -->
+    <div class="jumbotron jumbotron-fluid feature" id="feature-last">
+        <div class="container">
+            <div class="row justify-content-between text-center text-md-left">
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 flex-md-last">
+                    <h2 class="font-weight-bold">Safe and reliable</h2>
+                    <p class="my-4">
+                        Our platform is safe, we keep your data private,
+                        <br> and your credentials are stored in our safe database.
+                    </p>
+                </div>
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center flex-md-first">
+                    <img src="{% static 'img/feature-2.svg' %}" alt="Safe and reliable" class="mx-auto d-block">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- price table -->
+    <div class="container my-5 py-2" id="price-table">
+        <h2 class="text-center font-weight-bold d-block mb-3">Check our pricing</h2>
+        <div class="row">
+            <div data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center py-4 mt-5">
+                <h4 class="my-4">STARTUP</h4>
+                <p class="font-weight-bold">$ <span class="display-2 font-weight-bold">0</span> / MO.</p>
+                <ul class="list-unstyled">
+                    <li>Unlimited text messages</li>
+                    <li>Maximum of 10 voice messages per day</li>
+                    <li>Maximum of 20 friends</li>
+                </ul>
+                <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-ghost">Get Free</a>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center py-4 mt-5 rounded" id="price-table__premium">
+                <h4 class="my-4">PREMIUM</h4>
+                <p class="font-weight-bold">$ <span class="display-2 font-weight-bold">4</span> / MO.</p>
+                <ul class="list-unstyled">
+                    <li>Unlimited text messages</li>
+                    <li>Maximum of 100 voice messages per day</li>
+                    <li>Maximum of 200 friends</li>
+                    <li>Maximum of 20 Tasks</li>
+                </ul>
+                <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-green">Purchase</a>
+            </div>
+            <div data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center py-4 mt-5">
+                <h4 class="my-4">PROFESSIONAL</h4>
+                <p class="font-weight-bold">$ <span class="display-2 font-weight-bold">10</span> / MO.</p>
+                <ul class="list-unstyled">
+                    <li>Unlimited text messages</li>
+                    <li>Unlimited voice messages per day</li>
+                    <li>Unlimited number of friends</li>
+                    <li>Unlimited Tasks</li>
+                </ul>
+                <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-ghost">Purchase</a>
+            </div>
+        </div>
+    </div>
+    <!-- client -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-md-2 py-2 align-self-center">
+                    <img src="{% static 'img/client-1.png' %}" class="mx-auto d-block">
+                </div>
+                <div class="col-sm-4 col-md-2 py-2 align-self-center">
+                    <img src="{% static 'img/client-2.png' %}" class="mx-auto d-block">
+                </div>
+                <div class="col-sm-4 col-md-2 py-2 align-self-center">
+                    <img src="{% static 'img/client-3.png' %}" class="mx-auto d-block">
+                </div>
+                <div class="col-sm-4 col-md-2 py-2 align-self-center">
+                    <img src="{% static 'img/client-4.png' %}" class="mx-auto d-block">
+                </div>
+                <div class="col-sm-4 col-md-2 py-2 align-self-center">
+                    <img src="{% static 'img/client-5.png' %}" class="mx-auto d-block">
+                </div>
+                <div class="col-sm-4 col-md-2 py-2 align-self-center">
+                    <img src="{% static 'img/client-6.png' %}" class="mx-auto d-block">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contact -->
+    <div class="jumbotron jumbotron-fluid" id="contact" style="background-image: url({% static 'img/contact-bk.jpg' %});">
+        <div class="container my-5">
+            <div class="row justify-content-between">
+                <div class="col-md-6 text-white">
+                    <h2 class="font-weight-bold">Contact Us</h2>
+                    <p class="my-4">
+                        Have any questions ?,
+                        <br> Feel free to contact us.
+                        <span class="text-secondary">
+                            As we may receive many messages, we applogise for any delays in replying your message.
+                        </span>
+                    </p>
+                    <ul class="list-unstyled">
+                        <li>Email : languagelab@gmail.com</li>
+                        <li>Phone : 361-688-5824</li>
+                        <li>Address : 4826 White Avenue, Corpus Christi, Texas</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <form>
+                    	<div class="row">
+	                        <div class="form-group col-md-6">
+	                            <label for="name">Your Name</label>
+	                            <input type="name" class="form-control" id="name">
+	                        </div>
+	                        <div class="form-group col-md-6">
+	                            <label for="Email">Your Email</label>
+	                            <input type="email" class="form-control" id="Email">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label for="message">Message</label>
+	                        <textarea class="form-control" id="message" rows="3"></textarea>
+	                    </div>
+                        <button type="submit" class="btn font-weight-bold atlas-cta atlas-cta-wide cta-green my-3">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<!-- copyright -->
+	<div class="jumbotron jumbotron-fluid" id="copyright">
+        <div class="container">
+            <div class="row justify-content-between">
+            	<div class="col-md-6 text-white align-self-center text-center text-md-left my-2">
+                    Copyright © 2022 LanguageLab.
+                </div>
+                <div class="col-md-6 align-self-center text-center text-md-right my-2" id="social-media">
+                    <a href="#" class="d-inline-block text-center ml-2">
+                    	<i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="d-inline-block text-center ml-2">
+                    	<i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="d-inline-block text-center ml-2">
+                    	<i class="fa fa-medium" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="d-inline-block text-center ml-2">
+                    	<i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- AOS -->
+    <script src="{% static 'js/aos.js' %}"></script>
+    <script>
+      AOS.init({
+      });
+    </script>
+</body>
+
+</html>

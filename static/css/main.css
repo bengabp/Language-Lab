@@ -1,0 +1,12 @@
+:root{
+    --bg-color-green:#00FFAD;
+    --text-color-black:black;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x:hidden;
+}
