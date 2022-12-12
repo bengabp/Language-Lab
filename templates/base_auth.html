@@ -44,7 +44,7 @@
             {% for message in messages %}
                 <div class ="message {{ message.level_tag }}">
                     <i class="fa fa-exclamation-circle me-2"></i>{{ message }}
-                    <button class="close-btn">
+                    <button class="close-btn" onclick="dismissAlert()">
                         <i class="fa fa-times"></i>
                     </button>
                 </div>
@@ -80,6 +80,7 @@
 
     <!-- Template Javascript -->
     <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
 </body>
 
 </html>

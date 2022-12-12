@@ -16,7 +16,7 @@ def auth_login(request):
         if user:
             if check_password(password,user.password):
                 login(request,user)
-                
+                messages.success(request,f"Successfully logged in as {user.username}")
                 return HttpResponseRedirect("/")
             else:
                 messages.error(request,"Incorrect Password")
@@ -37,17 +37,20 @@ def auth_register(request):
         user = UserAccount.objects.filter(username=username).first()
 
         if user:
-            return HttpResponse("username not available")
+            messages.error(request,"Username is not available")
         else:
             user = UserAccount(username=username,email=email,password=make_password(password))
             user.save()
             login(request,user)
+            messages.success(request,f"Successfully logged in as {user.username}")
             return HttpResponseRedirect("/")
             
     return render(request,"signup.html")
 
 def auth_logout(request):
     logout(request)
+    messages.success(request,"Successfully logged out")
+
     return HttpResponseRedirect("/")
 
 def auth_reset_password(request):

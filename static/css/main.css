@@ -70,6 +70,8 @@ button:focus,
     height: 50px;
     overflow: hidden;
     top: 10px;
+    
+    z-index:99;
     /* max-width: 500px; */
 }
 
@@ -77,14 +79,22 @@ button:focus,
     display: flex;
     gap: 10px;
     padding: 10px 15px;
-    background-color: #d7e3de40;
+    background-color: #ffffff93;
     align-items: center;
-    border-radius: 10px;
+    /* border-radius: 10px; */
+    border-left:5px solid rgba(0, 81, 255, 0.738);
+    height:50px;
+    transition:0.3s;
 }
 
 .message button{
     outline: none;
     border:none;
+}
+
+.message:hover{
+    cursor: pointer;
+    transform:translateX(10px);
 }
 
 .message i{

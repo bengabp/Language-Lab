@@ -22,6 +22,19 @@
 </head>
 
 <body>
+    {% if messages %}
+        <div id="messages" >
+            {% for message in messages %}
+                <div class ="message {{ message.level_tag }}">
+                    <i class="fa fa-exclamation-circle me-2"></i>{{ message }}
+                    <button class="close-btn" onclick="dismissAlert()">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
     <!-- banner -->
     <div class="jumbotron jumbotron-fluid" id="banner" style="background-image: url({% static 'img/banner-bk.jpg' %});">
         <div class="container text-center text-md-left">
@@ -239,6 +252,7 @@
       AOS.init({
       });
     </script>
+    <script src="{% static 'js/custom.js' %}"></script>
 </body>
 
 </html>
