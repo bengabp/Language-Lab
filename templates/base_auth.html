@@ -33,11 +33,25 @@
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
     <link href="{% static 'css/custom.css' %}" rel="stylesheet">
 
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css">
+
     
 </head>
 
 <body style="overflow-x:hidden;">
+    {% if messages %}
+        <div id="messages" >
+            {% for message in messages %}
+                <div class ="message {{ message.level_tag }}">
+                    <i class="fa fa-exclamation-circle me-2"></i>{{ message }}
+                    <button class="close-btn">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
     <div class="container-fluid position-relative d-flex p-0">
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
