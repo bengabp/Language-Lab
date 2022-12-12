@@ -10,7 +10,7 @@
                         <a href="{% url 'home' %}" class="">
                             <h3 class="text-primary">
                                 <div class="col-2" style="max-width:max-content;">
-                                    <img src="{% static 'img/lab-logo.png' %}" alt="logo" height="60px" width="60px">
+                                    <img src="{% static 'img/lab-logo.png' %}" alt="logos" height="60px" width="60px" class="img-normal">
                                 </div>
                             </h3>
                         </a>
@@ -33,7 +33,7 @@
                             </div>
                             <a href="{% url 'reset_password' %}">Forgot Password</a>
                         </div>
-                        <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Login</button>
+                        <button type="submit" class="btn font-weight-bold atlas-cta atlas-cta-wide cta-green my-3">Login</button>
                     </form>
                     <p class="text-center mb-0">Don't have an Account? <a href="{% url 'register' %}">Register</a></p>
                 </div>

@@ -11,7 +11,7 @@
                         <a href="{% url 'home' %}" class="">
                             <h3 class="text-primary">
                                 <div class="col-2" style="max-width:max-content;">
-                                    <img src="{% static 'img/lab-logo.png' %}" alt="logo" height="60px" width="60px">
+                                    <img src="{% static 'img/lab-logo.png' %}" alt="logo" height="60px" width="60px" class="img-normal">
                                 </div>
                             </h3>
                         </a>
@@ -37,9 +37,9 @@
                                 <label class="form-check-label" for="exampleCheck1">Remember login</label>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Register</button>
+                        <button type="submit" class="btn font-weight-bold atlas-cta atlas-cta-wide cta-green my-3">Register</button>
                     </form>
-                    <p class="text-center mb-0">Already have an Account? <a href="{% url 'login' %}">Login</a></p>
+                    <p class="text-center mb-0 text-primary">Already have an Account? <a href="{% url 'login' %}">Login</a></p>
                 </div>
             </div>
         </div>

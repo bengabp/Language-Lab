@@ -115,11 +115,12 @@ button {
     padding: 3px 0;
 }
 
-#contact form {
+form {
     color: #00FFAD;
 }
 
 #contact form input,
+input,textarea,
 #contact form textarea {
     background: transparent;
     border: 1px solid #00FFAD;
