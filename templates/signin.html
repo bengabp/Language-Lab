@@ -7,7 +7,7 @@
             <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
                 <div class="rounded p-4 p-sm-5 my-4 mx-3 card">
                     <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
-                        <a href="{% url 'home' %}" class="">
+                        <a href="{% url 'Chatapp:home' %}" class="">
                             <h3 class="text-primary">
                                 <div class="col-2" style="max-width:max-content;">
                                     <img src="{% static 'img/lab-logo.png' %}" alt="logos" height="60px" width="60px" class="img-normal">
@@ -16,7 +16,7 @@
                         </a>
                         <h3>Login</h3>
                     </div>
-                    <form action="{% url 'login' %}" method="POST" enctype="multipart/form-data">
+                    <form action="{% url 'Authentication:login' %}" method="POST" enctype="multipart/form-data">
                         {% csrf_token %}
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control" id="floatingInput" autocomplete="off" name="username" placeholder=" ">
@@ -31,11 +31,11 @@
                                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                 <label class="form-check-label" for="exampleCheck1" name="remember">Remember login</label>
                             </div>
-                            <a href="{% url 'reset_password' %}">Forgot Password</a>
+                            <a href="{% url 'Authentication:reset_password' %}">Forgot Password</a>
                         </div>
                         <button type="submit" class="btn font-weight-bold atlas-cta atlas-cta-wide cta-green my-3">Login</button>
                     </form>
-                    <p class="text-center mb-0 ">Don't have an Account? <a href="{% url 'register' %}">Register</a></p>
+                    <p class="text-center mb-0 ">Don't have an Account? <a href="{% url 'Authentication:register' %}">Register</a></p>
                 </div>
             </div>
         </div>

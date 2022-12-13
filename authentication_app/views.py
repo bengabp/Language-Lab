@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse,HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.contrib.auth import login,logout,authenticate
@@ -17,13 +17,11 @@ def auth_login(request):
             if check_password(password,user.password):
                 login(request,user)
                 messages.success(request,f"Successfully logged in as {user.username}")
-                return HttpResponseRedirect("/")
+                return redirect("Chatapp:dashboard")
             else:
                 messages.error(request,"Incorrect Password")
         else:
             messages.error(request,"Sorry,the account was not found")
-            messages.error(request,"This is another message")
-            messages.error(request,"Lets see")
 
     return render(request,"signin.html")
 
@@ -43,7 +41,7 @@ def auth_register(request):
             user.save()
             login(request,user)
             messages.success(request,f"Successfully logged in as {user.username}")
-            return HttpResponseRedirect("/")
+            return HttpResponseRedirect("dashboard")
             
     return render(request,"signup.html")
 

@@ -65,21 +65,18 @@
 /*** Layout ***/
 .sidebar {
     position: fixed;
-    top: 0;
+    top: 80px;
     left: 0;
     bottom: 0;
     width: 250px;
-    height: 100vh;
+    height: auto;
     overflow-y: auto;
-    background: var(--secondary);
     transition: 0.5s;
-    z-index: 999;
 }
 
 .content {
     margin-left: 250px;
     min-height: 100vh;
-    background: var(--dark);
     transition: 0.5s;
 }
 
@@ -121,18 +118,15 @@
 /*** Navbar ***/
 .sidebar .navbar .navbar-nav .nav-link {
     padding: 7px 20px;
-    color: var(--light);
+    /* color: var(--light); */
     font-weight: 500;
-    border-left: 3px solid var(--secondary);
-    border-radius: 0 30px 30px 0;
     outline: none;
+    transition:0.5s;
 }
 
 .sidebar .navbar .navbar-nav .nav-link:hover,
 .sidebar .navbar .navbar-nav .nav-link.active {
-    color: var(--primary);
-    background: var(--dark);
-    border-color: var(--primary);
+    transform: translateX(10px);
 }
 
 .sidebar .navbar .navbar-nav .nav-link i {
@@ -141,13 +135,15 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: var(--dark);
+    background: #fdf3f3bf;
     border-radius: 40px;
+    transition:0.5s;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.256));
 }
 
 .sidebar .navbar .navbar-nav .nav-link:hover i,
 .sidebar .navbar .navbar-nav .nav-link.active i {
-    background: var(--secondary);
+    background: #5f83cb1c;
 }
 
 .sidebar .navbar .dropdown-toggle::after {

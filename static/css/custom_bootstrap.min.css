@@ -3866,7 +3866,7 @@ tbody.collapse.show {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding: 0.5rem 1rem;
+    padding: 10px 1rem;
 }
 .navbar-brand {
     display: inline-block;

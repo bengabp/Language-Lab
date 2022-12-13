@@ -54,7 +54,7 @@ body {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #023047;
+    
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -202,12 +202,12 @@ sup {
     top: -0.5em;
 }
 a {
-    color: var(--bs-blue);
+    color: inherit;
     transition:0.3s;
     text-decoration: none;
 }
 a:hover {
-    color:rgb(28, 103, 216);
+    color:rgba(19, 73, 154, 0.775);
 }
 a:not([href]):not([class]),
 a:not([href]):not([class]):hover {
@@ -3559,9 +3559,7 @@ fieldset:disabled .btn {
     list-style: none;
 }
 .nav-link {
-    display: block;
     padding: 0.5rem 1rem;
-    color: var(--bg-color-green);
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
         border-color 0.15s ease-in-out;
 }
@@ -3572,7 +3570,8 @@ fieldset:disabled .btn {
 }
 .nav-link:hover,
 .nav-link:focus {
-    color: #bc1212;
+    color:rgb(0, 255, 200);
+    
 }
 .nav-link.disabled {
     color: #6c757d;
@@ -3647,7 +3646,7 @@ fieldset:disabled .btn {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding-top: 0.5rem;
+    padding-top: 2rem;
     padding-bottom: 0.5rem;
 }
 .navbar > .container,
@@ -3925,9 +3924,9 @@ fieldset:disabled .btn {
     color: #fff;
 }
 .navbar-dark .navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 0.55);
+    color: rgb(39 123 157 / 15%);
 }
-.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-darknavlink .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link:focus {
     color: rgba(255, 255, 255, 0.75);
 }
