@@ -11,7 +11,7 @@ def home(request):
 @login_required(login_url="login")
 def dashboard(request):
     context = {
-
+        "counts":range(20)
     }
     return render(request,"index.html",context=context)
 
@@ -19,6 +19,6 @@ def dashboard(request):
 @login_required(login_url="login")
 def tasks(request):
     context = {
-
+        "counts":range(20)
     }
     return render(request,"index.html",context=context)

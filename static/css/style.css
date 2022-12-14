@@ -72,6 +72,7 @@
     height: auto;
     overflow-y: auto;
     transition: 0.5s;
+    z-index: 999;
 }
 
 .content {

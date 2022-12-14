@@ -1,5 +1,5 @@
 :root{
-    --bg-color-green:#00FFAD;
+    --bg-color-blue:#0099ff;
     --text-color-black:black;
 }
 
@@ -8,12 +8,25 @@ html{
 }
 
 body{
-    overflow-x:hidden;
+    overflow:hidden;
     color: #023047;
     -webkit-user-drag: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
+}
+
+::-webkit-scrollbar{
+    background-color: transparent;
+    width: 8px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #00000012;
 }
 
 .img-normal{
@@ -118,20 +131,106 @@ button:focus,
 }
 
 .notification-badge{
-    background-color: #4898dd63;
-    color: #075ecd;
+    background-color: #ff0000;
+    color: #ffffff;
+    border:2px solid white;
     height: 20px;
     width: 20px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 8px;
+    font-size: 10px;
     font-weight: bolder;
     display: flex;
     font-family: monospace;
-    padding:11px;
+    padding: 11px;
+    align-items: center;
+    justify-content: center;
 }
 
 .myicon{
     color:grey;
 }
+
+.subpage{
+    display:flex;
+    flex-direction: row;
+    gap:10px;
+}
+
+.content{
+}
+
+#chats{
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    /* padding-bottom:50px; */
+}
+
+.chatcontainer{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 85vh;
+    margin-top:10px;
+}
+
+#friends-profiles{
+    padding: 15px;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    cursor: pointer;
+    overflow-y: scroll;
+    height: 100%;
+    /* padding-bottom:100px; */
+}
+
+.heading-text{
+    margin:10px;
+    margin:none;
+}
+
+.center{
+    text-align:center;
+}
+
+.chatbanner{
+    display:flex;
+    justify-content: space-between;
+    padding-left:8px;
+    padding-right:8px;
+}
+
+#current-chat{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    /* background-color: blue; */
+    align-items: flex-start;
+    padding: 3px;
+}
+
+#chatdetails{
+    display: flex;
+    flex-direction: column;
+    color: #0c3056;
+    font-weight: bolder;
+    line-height: 21.3px;
+    font-size: 14px;
+    align-items:flex-end;
+}
+
+#message-container{
+    display:flex;
+    position:fixed;
+    bottom:0px;
+    background-color:rgb(255, 252, 252);
+    align-self:center;
+    width:80%;
+    align-items:center;
+    justify-content:center;
+    padding:5px;
+}
+
