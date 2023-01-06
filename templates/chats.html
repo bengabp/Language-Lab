@@ -10,8 +10,8 @@
                 <h1 class="mb-0 heading-text">Chats</h1>
                 <div id="current-chat">
                     <div id="chatdetails">
-                        <span id="chat-username">{{chat_info.username}}</span>
-                        <span id="chat-location">{{chat_info.location}}</span>
+                        <span id="chat-username">{{friend_info.username}}</span>
+                        <span id="chat-location">{{friend_info.location}}</span>
                     </div>
                     <div class="position-relative">
                         <img class="rounded-circle" src="{% static 'img/user.jpg' %}" alt="" style="width: 40px; height: 40px;">
@@ -20,15 +20,14 @@
                 </div>
             </div>
             <div class="chatcontainer">
-
                 <div id="friends-profiles" class="">
                     {% for friend in friends %}
-                        <div class="profilepic" data-username="{{friend.username}}" onclick="connectClient('{{friend.username}}')">
-                            <img class="rounded-circle availability" src="/{{friend.profile_pic}}" alt="" style="width: 100%; min-width:40px;">
-                        </div>
+                        {% if friend.username != user.username %}
+                            <div class="profilepic" data-username="{{friend.username}}" onclick="connectClient('{{friend.username}}')">
+                                <img class="rounded-circle availability" src="/{{friend.profile_pic}}" alt="" style="width: 100%; min-width:40px;">
+                            </div>
+                        {% endif %}
                     {% endfor %}
-                    <br>
-                    <br>
                 </div>
                 
                 <div id="chats">

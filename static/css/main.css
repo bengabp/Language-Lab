@@ -235,8 +235,18 @@ button:focus,
     align-items: center;
 }
 
+.profilepic{
+    /* background-color: red; */
+    width: 50px;
+    height:50px;
+}
+
+
 img.availability{
     border:2px solid var(--bs-green);
+    object-fit: cover;
+    height:100%;
+    width:100%;
 }
 
 #message-container{

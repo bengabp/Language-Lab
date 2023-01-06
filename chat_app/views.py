@@ -26,26 +26,3 @@ def tasks(request):
     }
     return render(request,"tasks.html",context=context)
 
-class ChatView(View):
-    def get(self,request,username):
-        friends = UserAccount.objects.all()
-        friend_info = {
-            "username":"graphene",
-            "location":"Belarus/Russia",
-            "profile_pic":"img/user.jpg",
-            "is_active":True
-        }
-
-        user = UserAccount.objects.filter(username=username).first()
-        if user:
-            friend_info = user.__dict__
-
-        context = {
-            "friends":friends,
-            "chat_info":friend_info
-        }
-
-        return render(request,"chats.html",context=context)
-    
-    def post(self,request):
-        pass
