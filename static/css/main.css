@@ -201,7 +201,7 @@ button:focus,
 
 .chatbanner{
     display:flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding-left:8px;
     padding-right:8px;
 }
@@ -274,3 +274,16 @@ img.availability{
     box-shadow: 0 1px 16px 0px #3835353b;
     font-size:small;
 }
+
+
+#navbar-heading{
+    margin-left:20px;
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+
+#navbar-heading h1{
+    margin-bottom:0;
+}
+

@@ -1,0 +1,4 @@
+
+
+class FriendRequestFailedException(Exception):
+    pass

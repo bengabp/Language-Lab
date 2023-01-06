@@ -4,7 +4,7 @@ from .views import home,dashboard,tasks
 
 
 
-from .chat_views.chat_view import ChatView
+from .chat_views.chat_view import ChatView,chats_home
 from .chat_views.notifications_view import NotificationsView
 from .chat_views.friends_view import FriendsView
 from .chat_views.settings_view import SettingsView
@@ -16,6 +16,8 @@ urlpatterns = [
     path('',home,name='home'),
     path('dashboard',dashboard,name='dashboard'),
     path('tasks',tasks,name="tasks"),
+
+    path('chats',chats_home,name="chats_home"),
     path('chats/<str:username>',ChatView.as_view(),name="chats"),
 
     path('notifications',NotificationsView.as_view(),name="notifications"),

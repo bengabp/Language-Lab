@@ -1,8 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.views import View
 
 from ..models import UserAccount
 
+def chats_home(request):
+    return redirect("/chats/test")
 
 class ChatView(View):
     def get(self,request,username):
@@ -21,6 +23,7 @@ class ChatView(View):
             friend_info = user
 
         context = {
+            "navbar_text":"Chats",
             "friends":friends,
             "friend_info":friend_info
         }
