@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+    <!-- Content Start -->
+    <div class="content" style="">
+        <!-- Widgets Start -->
+        <div class="container-fluid pt-2 px-1">
+            <div class="chatbanner">
+                <h1 class="mb-0 heading-text">Chats</h1>
+                <div id="current-chat">
+                    <div id="chatdetails">
+                        <span id="chat-username">{{chat_info.username}}</span>
+                        <span id="chat-location">{{chat_info.location}}</span>
+                    </div>
+                    <div class="position-relative">
+                        <img class="rounded-circle" src="{% static 'img/user.jpg' %}" alt="" style="width: 40px; height: 40px;">
+                        <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="chatcontainer">
+
+                <div id="friends-profiles" class="">
+                    {% for friend in friends %}
+                        <div class="profilepic" data-username="{{friend.username}}" onclick="connectClient('{{friend.username}}')">
+                            <img class="rounded-circle availability" src="/{{friend.profile_pic}}" alt="" style="width: 100%; min-width:40px;">
+                        </div>
+                    {% endfor %}
+                    <br>
+                    <br>
+                </div>
+                
+                <div id="chats">
+                    
+                </div>
+
+            </div>
+            <div id="message-container">
+                <textarea id="message" value="" placeholder="Type message ..."></textarea>
+                <button id="send-btn" class="btn">
+                    <i class="fa fa-paper-plane fa-lg"></i>
+                </button>
+                <button id="record-btn" class="btn">
+                    <i class="fa fa-microphone fa-lg"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Widgets End -->
+    </div>
+    <!-- Content End -->
+{% endblock %}

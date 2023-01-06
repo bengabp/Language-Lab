@@ -46,14 +46,14 @@
                 </div>
             </header>
             {% if user.is_authenticated %}
-                <h1 class="text-white">Current User : {{user.username}} | {{user.email}}</h1>
+                <span class="text-white">Current User:{{user.username}}</span>
             {% else %}
                 <h1 class="text-white">Anonymous User logged in</h1>
             {% endif %}
 
             <p data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true">
                 <h1  class="display-3 text-white font-weight-bold my-5">
-                    Language Lab
+                    Lexi<span style="color:#00FFAD;" class="">K</span>on
                 </h1>
                 <h4 style="color:#8ECAE6;">Learn Languages with ease</h4>
             </p>

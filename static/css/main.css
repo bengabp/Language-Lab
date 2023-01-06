@@ -5,20 +5,27 @@
 
 html{
     scroll-behavior: smooth;
+    overflow-x:hidden;
+    /* overflow-y:hidden; */
+    margin:0;
+    padding:0;
+    /* min-width: 1024px; */
 }
 
 body{
-    overflow:hidden;
     color: #023047;
     -webkit-user-drag: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
+    /* min-width:1024px; */
+    overflow-x:hidden;
+    overflow-y:hidden;
 }
 
 ::-webkit-scrollbar{
     background-color: transparent;
-    width: 8px;
+    width: 5px;
 }
 
 ::-webkit-scrollbar-track{
@@ -81,16 +88,13 @@ button:focus,
     display: flex;
     flex-direction: column;
     gap: 30px;
-    /* padding: 10px; */
     align-items: center;
     position: fixed;
     width: 100%;
     height: 50px;
     overflow: hidden;
     top: 10px;
-    
-    z-index:99;
-    /* max-width: 500px; */
+    z-index:9999;
 }
 
 .message{
@@ -162,9 +166,8 @@ button:focus,
 #chats{
     overflow-y: scroll;
     width: 100%;
-    height: 100%;
+    height: 90%;
     padding: 10px;
-    /* padding-bottom:50px; */
 }
 
 .chatcontainer{
@@ -176,14 +179,14 @@ button:focus,
 }
 
 #friends-profiles{
-    padding: 15px;
+    padding: 10px;
     gap: 15px;
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
     cursor: pointer;
     overflow-y: scroll;
-    height: 100%;
+    height: 90%;
     /* padding-bottom:100px; */
 }
 
@@ -222,15 +225,42 @@ button:focus,
     align-items:flex-end;
 }
 
-#message-container{
-    display:flex;
-    position:fixed;
-    bottom:0px;
-    background-color:rgb(255, 252, 252);
-    align-self:center;
-    width:80%;
-    align-items:center;
-    justify-content:center;
-    padding:5px;
+
+.d-flex .rf{
+    display: flex !important;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
 }
 
+img.availability{
+    border:2px solid var(--bs-green);
+}
+
+#message-container{
+    display: flex;
+    position: fixed;
+    bottom: 0px;
+    background-color: rgb(255, 252, 252);
+    align-self: center;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 5px;
+    align-items: center;
+    padding:10px 10px;
+}
+
+#message{
+    outline: none;
+    resize: none;
+    width: 250px;
+    height: 40px;
+    outline: none;
+    border: 1px solid #8080804f;
+    border-radius: 5px;
+    padding: 3px 8px;
+    box-shadow: 0 1px 16px 0px #3835353b;
+    font-size:small;
+}

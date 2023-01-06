@@ -4,8 +4,8 @@ from django.contrib.auth.models import AbstractUser
 
 # Create your models here.
 class UserAccount(AbstractUser):
-    username = models.CharField(max_length=20,unique=True)
-    profile_pic = models.ImageField(upload_to = "profiles")
+    profile_pic = models.ImageField(upload_to = "static/profiles")
+    location = models.CharField(max_length=50,default="Somewhere")
     description = models.TextField()
     def _str__(self):
         return f"<UserAccount @{self.username}"

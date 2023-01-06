@@ -2,9 +2,9 @@
 {% load static %}
 {% block auth_dynamic_content %}
     <!-- Sign In Start -->
-    <div class="container-fluid">
+    <div class="container-fluid" style="padding-right:0;padding-left:0;">
         <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
-            <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
+            <div class="col-sm-8 col-md-6 col-lg-5 col-xl-4">
                 <div class="rounded p-4 p-sm-5 my-4 mx-3 card">
                     <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
                         <a href="{% url 'Chatapp:home' %}" class="">
@@ -27,10 +27,6 @@
                             <label for="floatingPassword">Password</label>
                         </div>
                         <div class="d-flex align-items-center justify-content-between mb-4">
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1" name="remember">Remember login</label>
-                            </div>
                             <a href="{% url 'Authentication:reset_password' %}">Forgot Password</a>
                         </div>
                         <button type="submit" class="btn font-weight-bold atlas-cta atlas-cta-wide cta-green my-3">Login</button>

@@ -54,7 +54,6 @@ body {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -2511,6 +2510,7 @@ textarea.form-control.is-invalid {
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
+    -webkit-user-select: none;
     user-select: none;
     background-color: transparent;
     border: 1px solid transparent;
@@ -4818,6 +4818,7 @@ fieldset:disabled .btn {
 .btn-close:disabled,
 .btn-close.disabled {
     pointer-events: none;
+    -webkit-user-select: none;
     user-select: none;
     opacity: 0.25;
 }
@@ -5408,6 +5409,7 @@ fieldset:disabled .btn {
     float: left;
     width: 100%;
     margin-right: -100%;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     transition: transform 0.6s ease-in-out;
 }
@@ -6847,12 +6849,15 @@ fieldset:disabled .btn {
     background-image: var(--bs-gradient) !important;
 }
 .user-select-all {
+    -webkit-user-select:all !important;
     user-select: all !important;
 }
 .user-select-auto {
+    -webkit-user-select:auto !important;
     user-select: auto !important;
 }
 .user-select-none {
+    -webkit-user-select:none !important;
     user-select: none !important;
 }
 .pe-none {

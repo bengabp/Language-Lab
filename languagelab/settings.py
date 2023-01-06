@@ -25,21 +25,23 @@ SECRET_KEY = 'django-insecure-y#2k*9m@xhaigm_-qa3du%5m9@)u29fm4q^-y$5oa6a(bdcm&$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 AUTH_USER_MODEL = "chat_app.UserAccount"
+ASGI_APPLICATION = "languagelab.asgi.application"
 
 # Application definition
 
 INSTALLED_APPS = [
+    "daphne",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "chat_app",
     "authentication_app",
-    "chat_app"
 ]
 
 MIDDLEWARE = [
