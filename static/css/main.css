@@ -40,6 +40,11 @@ body{
     max-width:none;
 }
 
+button,.button{
+    outline:none;
+    border:none;
+}
+
 .button:active, 
  button:active,
 .button:focus, 
@@ -82,6 +87,9 @@ button:focus,
     box-shadow: 0 0 0 0 rgba(0,123,255,0);
 }
 
+.text-bold{
+    font-weight:bolder;
+}
 
 #messages{
     background-color: transparent;
@@ -239,6 +247,8 @@ button:focus,
     /* background-color: red; */
     width: 50px;
     height:50px;
+    min-width:50px;
+    min-height:50px;
 }
 
 
@@ -279,11 +289,74 @@ img.availability{
 #navbar-heading{
     margin-left:20px;
     display:flex;
-    gap:10px;
+    justify-content: space-evenly;
     align-items:center;
+    width:90%;
 }
 
 #navbar-heading h1{
     margin-bottom:0;
 }
 
+
+
+.content-main,.friends-list{
+    overflow: scroll;
+    height: 90vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    gap: 15px;
+    justify-self: center;
+    align-self: center;
+    transition:0.5s;
+}
+
+.friend-list-item{
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.friend-list-item:hover{
+    box-shadow: 0 1px 10px 0px #bdbbbb3f;
+    background-color: #eff5f7;
+    cursor:pointer;
+}
+
+.friend-list-item:hover .action-buttons{
+    visibility: visible;
+    transition:0.5s;
+}
+
+.row1{
+    display:flex;
+    gap:10px;
+}
+
+.row1 .lower{
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+}
+
+.action-buttons{
+    display:flex;
+    visibility: hidden;
+    flex-direction:row;
+    gap:10px;
+    align-self:flex-end;
+}
+
+#general-searchbar{
+    height:40px;
+    padding:3px 8px;
+    width:100%;
+    outline:none;
+    border:none;
+    width:30vw;
+    border-radius:10px;
+}

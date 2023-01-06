@@ -5,30 +5,24 @@
     <!-- Content Start -->
     <div class="content" style="">
         <!-- Widgets Start -->
-        <div class="container-fluid pt-2 px-1">
-            {% comment %} <div class="chatbanner">
-                <h1 class="mb-0 heading-text">Friends</h1>
-            </div> {% endcomment %}
-
-            <div class="col" style="overflow:scroll;">
-                <div class="p-4 w-100" style="overflow:scroll;max-height:90vh;padding-bottom:100px;">
-                    {% for friend in friends %}
-                        <div class="d-flex align-items-center py-3">
-                            <div class="profilepic" data-username="{{friend.username}}" style="width:55px;">
-                                <img class="rounded-circle availability" src="/{{friend.profile_pic}}" alt="">
-                            </div>
-                            <div class="w-100 ms-3">
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h6 class="mb-0">{{friend.username}}</h6>
-                                </div>
-                                <span>{{friend.description}}</span>
-                            </div>
+        <div class="friends-list">
+            {% for friend in friends %}
+                <div class="friend-list-item">
+                    <div class="row1">
+                        <div class="profilepic" data-username="{{friend.username}}" style="">
+                            <img class="rounded-circle availability" src="/{{friend.profile_pic}}" alt="">
                         </div>
-                    {% endfor %}
+                        <div class="lower">
+                            <span class="mb-0 text-bold">{{friend.username}}</span>
+                            <span>{{friend.description}}</span>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn" style="color:var(--bs-red);"><i class="fa fa-trash fa-lg"></i></button>
+                    </div>
                 </div>
-            </div>
+            {% endfor %}
         </div>
-        <!-- Widgets End -->
     </div>
     <!-- Content End -->
 {% endblock %}
